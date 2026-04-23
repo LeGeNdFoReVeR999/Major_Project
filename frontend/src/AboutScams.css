@@ -1,0 +1,879 @@
+/* About Scams Page Styles */
+
+.about-scams-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f0f4f8 0%, #ffffff 50%);
+}
+
+/* Header */
+.about-header {
+  background: linear-gradient(135deg, #003d7a 0%, #1455b8 100%);
+  color: white;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  background: white;
+  color: #003d7a;
+  transform: translateY(-2px);
+}
+
+.header-title {
+  flex: 1;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.header-title p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Main Content */
+.about-main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #003d7a;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Intro Section */
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+.intro-card {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+  border-left: 5px solid #dc3545;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.intro-card h2 {
+  margin-bottom: 1rem;
+}
+
+.intro-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.key-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid #dc3545;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #003d7a;
+  margin-bottom: 0.5rem;
+}
+
+.stat p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Red Flags Section */
+.red-flags-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #ffc107;
+}
+
+.red-flags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.red-flag-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff9e6;
+  border-left: 3px solid #ffc107;
+  border-radius: 4px;
+  color: #333;
+  font-weight: 500;
+}
+
+.flag-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Scam Types Section */
+.scam-types-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.scam-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.scam-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scam-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.scam-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.scam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.2s ease;
+}
+
+.scam-header:hover {
+  background: #f0f4f8;
+}
+
+.scam-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scam-icon {
+  font-size: 2rem;
+}
+
+.scam-card h3 {
+  font-size: 1.2rem;
+  color: #003d7a;
+  margin: 0;
+  font-weight: 600;
+}
+
+.expand-icon {
+  font-size: 1rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.scam-card.expanded .expand-icon {
+  transform: rotate(90deg);
+}
+
+.scam-content {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.scam-section h4 {
+  font-size: 1rem;
+  color: #003d7a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.deceive-list,
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.deceive-list li,
+.tips-list li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+.deceive-icon,
+.tip-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* General Tips Section */
+.general-tips-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #28a745;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tip-card {
+  background: linear-gradient(135deg, #f1f9f6 0%, #ffffff 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+  transform: translateY(-4px);
+}
+
+.tip-icon-large {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+  font-size: 1rem;
+  color: #003d7a;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.tip-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Action Section */
+.action-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #dc3545;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.action-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.action-card.warning {
+  background: #fff9e6;
+  border-left-color: #ffc107;
+}
+
+.action-card.critical {
+  background: #ffe6e6;
+  border-left-color: #dc3545;
+}
+
+.action-card.success {
+  background: #f1f9f6;
+  border-left-color: #28a745;
+}
+
+.action-card h3 {
+  font-size: 1.1rem;
+  color: #003d7a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.action-list,
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-list li,
+.resource-list li {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.action-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.resource-list li {
+  padding-left: 1.5rem;
+}
+
+.resource-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Resources Section */
+.resources-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #17a2b8;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.resource-card {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+}
+
+.resource-card h3 {
+  font-size: 1.05rem;
+  color: #003d7a;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.resource-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resource-card li {
+  font-size: 0.95rem;
+  color: #555;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.resource-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #17a2b8;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #003d7a 0%, #1455b8 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cta-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.cta-btn {
+  background: white;
+  color: #003d7a;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.about-footer {
+  background: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.about-footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.disclaimer {
+  opacity: 0.8;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-main {
+    padding: 2rem 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-title p {
+    font-size: 0.95rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .scam-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .scam-card.expanded {
+    grid-column: 1;
+  }
+
+  .key-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .red-flags-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .back-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .header-title h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-title p {
+    font-size: 0.85rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  .scam-header {
+    padding: 1rem;
+  }
+
+  .scam-title-group {
+    gap: 0.5rem;
+  }
+
+  .scam-icon {
+    font-size: 1.5rem;
+  }
+
+  .scam-card h3 {
+    font-size: 1rem;
+  }
+
+  .scam-content {
+    padding: 1rem;
+  }
+
+  .intro-card {
+    padding: 1rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark Mode Styles */
+html.dark-mode .about-scams-container {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 50%);
+}
+
+html.dark-mode .about-header {
+  background: linear-gradient(135deg, #0a2a4a 0%, #0d3a64 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+html.dark-mode .back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark-mode .back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+html.dark-mode .header-title h1 {
+  color: #e0e0e0;
+}
+
+html.dark-mode .header-title p {
+  color: #a0a0a0;
+}
+
+html.dark-mode section h2 {
+  color: #e0e0e0;
+}
+
+html.dark-mode .section-subtitle {
+  color: #a0a0a0;
+}
+
+html.dark-mode .intro-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+  border-left-color: #ff6b6b;
+}
+
+html.dark-mode .intro-card h2 {
+  color: #e0e0e0;
+}
+
+html.dark-mode .intro-card p {
+  color: #c0c0c0;
+}
+
+html.dark-mode .stat {
+  background: #2a2a2a;
+  border-top-color: #ff6b6b;
+  color: #e0e0e0;
+}
+
+html.dark-mode .stat strong {
+  color: #1a6dd8;
+}
+
+html.dark-mode .stat p {
+  color: #a0a0a0;
+}
+
+html.dark-mode .red-flags-section {
+  background: #1a1a1a;
+  border-top-color: #ffd43b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .red-flag-item {
+  background: #2a2a2a;
+  border-left-color: #ffd43b;
+  color: #e0e0e0;
+}
+
+html.dark-mode .scam-types-section {
+  background: #1a1a1a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .scam-card {
+  background: #2a2a2a;
+  border-color: #404040;
+}
+
+html.dark-mode .scam-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .scam-header {
+  background: #333;
+  border-bottom-color: #404040;
+}
+
+html.dark-mode .scam-header:hover {
+  background: #3a3a3a;
+}
+
+html.dark-mode .scam-card h3 {
+  color: #1a6dd8;
+}
+
+html.dark-mode .scam-content {
+  color: #e0e0e0;
+}
+
+html.dark-mode .scam-section h4 {
+  color: #1a6dd8;
+}
+
+html.dark-mode .deceive-list li,
+html.dark-mode .tips-list li {
+  color: #c0c0c0;
+}
+
+html.dark-mode .general-tips-section {
+  background: #1a1a1a;
+  border-top-color: #51cf66;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .tip-card {
+  background: linear-gradient(135deg, #1a2a1a 0%, #1a1a1a 100%);
+  border-left-color: #51cf66;
+}
+
+html.dark-mode .tip-card:hover {
+  box-shadow: 0 4px 12px rgba(81, 207, 102, 0.2);
+}
+
+html.dark-mode .tip-card h3 {
+  color: #1a6dd8;
+}
+
+html.dark-mode .tip-card p {
+  color: #a0a0a0;
+}
+
+html.dark-mode .action-section {
+  background: #1a1a1a;
+  border-top-color: #ff6b6b;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .action-card {
+  color: #e0e0e0;
+}
+
+html.dark-mode .action-card.warning {
+  background: #2a2410;
+  border-left-color: #ffd43b;
+}
+
+html.dark-mode .action-card.critical {
+  background: #2a1010;
+  border-left-color: #ff6b6b;
+}
+
+html.dark-mode .action-card.success {
+  background: #1a2a1a;
+  border-left-color: #51cf66;
+}
+
+html.dark-mode .action-card h3 {
+  color: #1a6dd8;
+}
+
+html.dark-mode .action-list li,
+html.dark-mode .resource-list li {
+  color: #c0c0c0;
+}
+
+html.dark-mode .resources-section {
+  background: #1a1a1a;
+  border-top-color: #17a2b8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .resource-card {
+  background: linear-gradient(135deg, #1a2a2a 0%, #1a1a1a 100%);
+  border-left-color: #17a2b8;
+}
+
+html.dark-mode .resource-card h3 {
+  color: #1a6dd8;
+}
+
+html.dark-mode .resource-card li {
+  color: #c0c0c0;
+}
+
+html.dark-mode .cta-section {
+  background: linear-gradient(135deg, #0a2a4a 0%, #0d3a64 100%);
+  color: #e0e0e0;
+}
+
+html.dark-mode .cta-section h2 {
+  color: #e0e0e0;
+}
+
+html.dark-mode .cta-btn {
+  background: #e0e0e0;
+  color: #0a2a4a;
+}
+
+html.dark-mode .cta-btn:hover {
+  background: #f0f0f0;
+}
+
+html.dark-mode .about-footer {
+  background: #0a0a0a;
+  color: #a0a0a0;
+  border-top: 1px solid #404040;
+}
+
+/* Dark mode theme toggle button for About Scams page */
+.theme-toggle-btn-about {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn-about:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+html.dark-mode .theme-toggle-btn-about {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark-mode .theme-toggle-btn-about:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
